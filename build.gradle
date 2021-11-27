@@ -48,8 +48,8 @@ tasks.withType(Test) {
     useJUnitPlatform()
 }
 
-task some_test(type: Test) {
+task some_test_2(type: Test) {
     useJUnitPlatform {
-        includeTags "pikabu"
+        includeTags "demoqa"
     }
 }
