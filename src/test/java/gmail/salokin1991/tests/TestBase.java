@@ -4,7 +4,6 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import gmail.salokin1991.config.CredentialConfig;
 import gmail.salokin1991.helpers.Attach;
-import gmail.salokin1991.pages.MainPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
