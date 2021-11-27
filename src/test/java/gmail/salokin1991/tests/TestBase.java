@@ -18,8 +18,6 @@ import static java.lang.String.format;
         public static CredentialConfig credentials =
                 ConfigFactory.create(CredentialConfig.class);
 
-        MainPage mainPage = new MainPage();
-
         @BeforeAll
         static void beforeAll() {
 
