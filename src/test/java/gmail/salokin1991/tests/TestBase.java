@@ -20,13 +20,14 @@ import static java.lang.String.format;
         @BeforeAll
         static void beforeAll() {
 
-            String selenoidUrl = System.getProperty("url", "selenoid.autotests.cloud/wd/hub/");
+//            String selenoidUrl = System.getProperty("url", "selenoid.autotests.cloud/wd/hub/");
+            String selenoidUrl = System.getProperty("url"); // clean some_test_2 -Durl={'JENKINS_VALUE'}
             String login = credentials.login();
             String password = credentials.password();
 
             SelenideLogger.addListener("allure", new AllureSelenide());
             Configuration.startMaximized = true;
-            Configuration.remote = format("https://%s:%s@selenoid.autotests.cloud/wd/hub/", login, password);
+            Configuration.remote = format("https://%s:%s@" + selenoidUrl, login, password);
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
